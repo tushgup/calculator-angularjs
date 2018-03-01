@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Angular JS Calculator</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.2/angular.min.js"></script>
+    <script src="calculator.js"></script>
+</head>
+<body>
+<div class="container-full-bg">
+    <div class="jumbotron" style="text-align: center;">
+        <div ng-app="CalculatorApp" ng-controller="CalculatorController">
+            <h1>Angular JS Calculator</h1>
+            <div class="row">
+                <div class="col">
+                <label for="no1">Number 1: </label>
+                <input type="number" ng-model="a" id="no1">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col">
+                    <label for="no2">Number 2: </label>
+                    <input type="number" ng-model="b" id="no2">
+                </div>
+            </div>
+
+            <div class="row mx-auto">
+                <div class="col">
+                <button class="btn btn-primary m-2" role="button" ng-click="add()">Add</button>
+                <button class="btn btn-primary m-2" role="button" ng-click="sub()">Subtract</button>
+                <button class="btn btn-primary m-2" role="button" ng-click="mul()">Multiply</button>
+                <button class="btn btn-primary m-2" role="button" ng-click="div()">Divide</button>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col">
+                    <label>Result: </label>
+                    <input ng-model="resultText" />
+                </div>
+            </div>
+
+
+
+        </div>
+    </div>
+</div>
+</body>
+</html>
